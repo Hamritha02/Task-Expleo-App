@@ -8,7 +8,7 @@ pipeline {
       steps {
         checkout scm
       }
-    }
+    } 
 
     stage('Build Docker Image') {     
       parallel { 
