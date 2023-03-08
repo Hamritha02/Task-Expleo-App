@@ -24,7 +24,7 @@ pipeline {
     }
     
     stage('Deploying App host') {
-      steps {
+      steps {      
       // sh 'sudo docker ps'
       sh 'sudo docker stop apphost || true && sudo docker rm apphost || true'
       sh 'sudo docker run -itd --name apphost -p 8080:8080 002936919350.dkr.ecr.us-east-1.amazonaws.com/app:${BUILD_NUMBER}'
