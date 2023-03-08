@@ -24,7 +24,7 @@ pipeline {
       }
     }
     
-    stage("Env Variables") {
+    stage('Env Variables') {
        environment {
          BUILD_NUMBER = "${env.BUILD_NUMBER}" // overrides the default BUILD_NUMBER
             }
