@@ -30,6 +30,7 @@ pipeline {
             }
       steps {      
        echo "BUILD_NUMBER =  ${env.BUILD_NUMBER}"
+       }
     }
     
     stage('Deploying App host') {
