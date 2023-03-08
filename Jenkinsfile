@@ -28,6 +28,8 @@ pipeline {
        environment {
          BUILD_NUMBER = "${env.BUILD_NUMBER}" // overrides the default BUILD_NUMBER
             }
+      steps {      
+       echo "BUILD_NUMBER =  ${env.BUILD_NUMBER}"
     }
     
     stage('Deploying App host') {
