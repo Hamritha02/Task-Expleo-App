@@ -3,7 +3,7 @@ pipeline {
     label 'app'
   }
     
-  stages {
+  stages {  
     stage('Git Checkout') {     
       steps {
         checkout scm
