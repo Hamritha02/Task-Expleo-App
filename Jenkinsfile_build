@@ -26,13 +26,13 @@ pipeline {
     
     stage('Env Variables') {
        environment {
-       //  BUILD_NUMBER = "${env.BUILD_NUMBER}" // overrides the default BUILD_NUMBER
-         currentBuild_number = "${env.BUILD_NUMBER}"
-         Previousbuild_number = "${env.currentBuild.previousBuild.number}"
+         BUILD_NUMBER = "${env.BUILD_NUMBER}" // overrides the default BUILD_NUMBER
+         currentBuild_number = "${BUILD_NUMBER}"
+         Previousbuild_number = "${currentBuild.previousBuild.number}"
             }
       steps {      
-       echo "currentBuild_number"
-       echo "Previousbuild_number"
+       echo "currentBuild_number  = "${BUILD_NUMBER}"
+       echo "Previousbuild_number = "${currentBuild.previousBuild.number} "
        //echo "${Build.BuildNumber}"
        }
     }
