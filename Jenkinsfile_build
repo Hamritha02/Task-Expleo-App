@@ -29,7 +29,7 @@ pipeline {
          BUILD_NUMBER = "${env.BUILD_NUMBER}" // overrides the default BUILD_NUMBER
             }
       steps {      
-       echo "currentBuild.number =  ${env.BUILD_NUMBER}"
+       echo "currentBuild.number =  ${BUILD_NUMBER}"
        echo "Previousbuild.number =  ${currentBuild.previousBuild.number}"
        }
     }
