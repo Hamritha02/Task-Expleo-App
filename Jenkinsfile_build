@@ -30,6 +30,7 @@ pipeline {
             }
       steps {      
        echo "currentBuild.number =  ${env.BUILD_NUMBER}"
+       echo "Previousbuild.number =  ${currentBuild.previousBuild.number}"
        }
     }
     
