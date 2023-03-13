@@ -32,7 +32,7 @@ pipeline {
             }
       steps {      
        echo "currentBuild_number  = "${BUILD_NUMBER}"
-       echo "Previousbuild_number = "${currentBuild.previousBuild.number} "
+       echo "Previousbuild_number = "${currentBuild.previousBuild.number}"
        //echo "${Build.BuildNumber}"
        }
     }
