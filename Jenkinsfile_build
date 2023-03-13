@@ -33,6 +33,5 @@ pipeline {
        echo "Previousbuild.number =  ${currentBuild.previousBuild.number}"
        }
     }
-    
    }
-  
+  }
