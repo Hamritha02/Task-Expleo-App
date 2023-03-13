@@ -13,7 +13,7 @@ pipeline {
       steps {      
       // sh 'sudo docker ps'
       sh 'sudo docker stop apphost || true && sudo docker rm apphost || true'
-      sh 'sudo docker run -itd --name apphost -p 8080:8080 002936919350.dkr.ecr.us-east-1.amazonaws.com/app:${Previousbuild.number}'  
+      sh 'sudo docker run -itd --name apphost -p 8080:8080 002936919350.dkr.ecr.us-east-1.amazonaws.com/app:${currentBuild.number}'  
       }
     }
   }
